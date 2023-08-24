@@ -7,6 +7,7 @@ import Nav from './Components/Nav';
 import Stocks from './Pages/Stocks';
 import About from './Pages/About';
 import Main from './Pages/Main';
+import StockInfo from './Pages/StockInfo';
 import './index.css';
 
 
@@ -19,7 +20,8 @@ function App() {
       <Routes>
         <Route path='/' element={ <Main /> } />
         <Route path='/about' element={ <About /> } />
-        <Route path='/stocks:symbol' element={ <Stocks /> } />
+        <Route path='/stocks' element={ <Stocks /> } />
+        <Route path='/stocks/:symbol' element={ <StockInfo /> } />
         <Route path='*' element={ <Navigate to='/'/> } />
       </Routes>
     </div>
