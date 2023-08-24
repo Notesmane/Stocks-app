@@ -1,70 +1,35 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+React Router Stock App
+========== DONE: Spin a new react up using create-react-app
 
-In the project directory, you can run:
+========== DONE: Look over the working Solution and examine the app in React Dev Tools to see if you can elicit the structure so that you have a starting point for you app.
 
-### `npm start`
+This version of the application should use hard-coded stocks data, which you can find in create a data.json file with the data below to use. however if you want to leverage pulling data from an API you can sign up for an API key and use https://financialmodelingprep.com/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Below contains sample data that you will place into a data.jsfile within your srcfolder. Copy and paste the code below as is.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Here is your routing table. So when your app is complete it should have all the routes below.
 
-### `npm test`
+Route	Renders	Component
+/	"This is the Homepage page"	Home
+/about	"This is theAabout page"	About
+/stocks/:symbol	A single stock	Stock
+/stocks	All stocks	Dashboard
+Your stock tracking app should have the following features...
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Navigation
+No matter what route the user is visiting, they should always see a navigation bar at the top of the window. It should contain links to "Home" and "About" pages.
 
-### `npm run build`
+Dashboard (/stocks)
+If a user visits /stocksor clicks "Home" in the navigation bar, they should be directed to a dashboard page. This page should list all of the stocks that the user is tracking, specifically their nameand symbol. These stocks should be pulled from stock-data.js.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Bonus: Try rendering the stocks as per the image below.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Stock (/stocks/:symbol)
+If a user clicks on one of the stocks listed in the Dashboard view, they should be directed to an individual stock show view. This view should display all of a stock's attributes.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The resources listed at the bottom of the readme might come in handy when building this out.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+About (/about)
+If a user clicks on "About" in the navigation bar, they should be directed to an about page. This is just a static page that displays a description of your app.
